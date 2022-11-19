@@ -8,11 +8,12 @@ export const useForm = () => {
 	const dispatch = useDispatch();
 	const [data, setData] = useState({
 		rover: "",
-		camera: "",
+		camera: "FHAZ",
 		sol: 1,
 		page: 1
 	});
 	const [alertERR, setAlertERR] = useState(false);
+
 
 
 	const handleClick = (e) => {
@@ -25,7 +26,6 @@ export const useForm = () => {
 		}
 		return dispatch(getPhotos(data));
 	};
-	console.log(data);
 
 	const handleChangeRover = (e) => {
 		setData({
@@ -57,5 +57,6 @@ export const useForm = () => {
 		handleChangeCamera,
 		handleChangeSol,
 		alertERR,
+		data,
 	}
 }

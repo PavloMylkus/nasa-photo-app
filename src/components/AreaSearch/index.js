@@ -4,22 +4,42 @@ import { ErrorAlert } from "../Alerts";
 import CameraSection from "./CameraSection";
 import RoverSection from "./RoverSection";
 import SolSectoion from "./SolSection";
+import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import ImageSearchIcon from '@mui/icons-material/ImageSearch';
+
 
 export default function AreaSearch() {
 	const { alertERR, handleClick, handleChangeRover, handleChangeCamera, handleChangeSol } = useForm();
 	return (
-		<div id="searchPhotos">
-			<form onSubmit={handleClick}>
 
+		<form onSubmit={handleClick}>
+			<Paper elevation={3}
+				sx={{
+					padding: 2,
+					margin: '0 auto',
+					maxWidth: 600,
+					maxHeight: 600,
+					minHeight: 250,
+					background: "rgb(125 125 125 / 28%)",
+					backdropFilter: 'blur(10px)',
+					borderRadius: '15px',
+					display: 'flex',
+					flexDirection: 'column'
+
+				}}>
 				<RoverSection onChange={handleChangeRover} />
-				<br />
-				<CameraSection onChange={handleChangeCamera} />
-				<br />
-				<SolSectoion onChange={handleChangeSol} />
-				<button type="submit">Search</button>
-				{alertERR ? <ErrorAlert /> : ""}
-			</form>
 
-		</div>
+				<CameraSection onChange={handleChangeCamera} />
+
+				<SolSectoion onChange={handleChangeSol} />
+				<Button type="submit" variant="contained" color="secondary" endIcon={<ImageSearchIcon />}>
+					Search
+				</Button>
+				{alertERR ? <ErrorAlert /> : ""}
+			</Paper>
+		</form>
+
+
 	);
 }
