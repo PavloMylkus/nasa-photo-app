@@ -26,7 +26,7 @@ const GridPhotos = () => {
 		alignItems: 'center'
 	}}>
 		{state.loading && <LoadingAlert />}
-		{state.photos.length == 0 && <PhotoNotFoundAlert />}
+		{state.photos.length === 0 && <PhotoNotFoundAlert />}
 		{state.photos.length > 0 && (
 			<Grid container spacing={2} sx={{
 				marginTop: 2,

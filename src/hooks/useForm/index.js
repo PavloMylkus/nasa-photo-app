@@ -1,6 +1,5 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { CURIOSITY_CAMERAS, OPPORTUNITY_AND_SPIRIT_CAMERAS } from "../../const";
 import { getPhotos } from "../../redux/actions/getPhotos";
 
 

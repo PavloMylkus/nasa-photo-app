@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import { Box } from "@mui/material";
-import { useForm } from "../../../hooks/useForm";
 
 
 const CameraSection = ({ onChange }) => {
