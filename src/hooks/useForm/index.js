@@ -1,18 +1,21 @@
 import { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
+import { CURIOSITY_CAMERAS, OPPORTUNITY_AND_SPIRIT_CAMERAS } from "../../const";
 import { getPhotos } from "../../redux/actions/getPhotos";
 
 
 export const useForm = () => {
+	const [alertERR, setAlertERR] = useState(false);
 
 	const dispatch = useDispatch();
+
 	const [data, setData] = useState({
 		rover: "",
 		camera: "FHAZ",
 		sol: 1,
 		page: 1
 	});
-	const [alertERR, setAlertERR] = useState(false);
+
 
 
 
@@ -28,12 +31,15 @@ export const useForm = () => {
 	};
 
 	const handleChangeRover = (e) => {
+
 		setData({
 			...data,
 			rover: e.target.value
 		});
-
 	};
+
+
+
 	const handleChangeCamera = (e) => {
 		setData({
 			...data,

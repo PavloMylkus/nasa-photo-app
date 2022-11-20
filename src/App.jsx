@@ -2,7 +2,6 @@ import "./App.css";
 import AreaPhotos from "./components/AreaPhotos";
 import React from "react";
 import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
 
 
 

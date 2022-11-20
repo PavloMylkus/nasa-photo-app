@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { LoadingAlert, PhotoNotFoundAlert } from "../Alerts";
 import Photos from "../Photos";
-import { experimentalStyled as styled } from '@mui/material/styles';
 import {
 	Box,
 	Grid,
-	Paper
 } from '@mui/material';
 import Button from '@mui/material/Button';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useForm } from "../../hooks/useForm";
 
 const GridPhotos = () => {
 

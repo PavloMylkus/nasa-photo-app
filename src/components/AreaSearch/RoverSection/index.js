@@ -50,9 +50,10 @@ const RoverSection = ({ onChange }) => {
 	});
 
 	// Inspired by blueprintjs
-	function BpRadio(props) {
+	const BpRadio = (props) => {
 		return (
 			<Radio
+
 				disableRipple
 				color="default"
 				checkedIcon={<BpCheckedIcon />}

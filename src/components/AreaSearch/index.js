@@ -11,6 +11,7 @@ import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 
 export default function AreaSearch() {
 	const { alertERR, handleClick, handleChangeRover, handleChangeCamera, handleChangeSol } = useForm();
+
 	return (
 
 		<form onSubmit={handleClick}>
@@ -21,7 +22,7 @@ export default function AreaSearch() {
 					maxWidth: 600,
 					maxHeight: 600,
 					minHeight: 250,
-					background: "rgb(125 125 125 / 28%)",
+					background: "#fff",
 					backdropFilter: 'blur(10px)',
 					borderRadius: '15px',
 					display: 'flex',

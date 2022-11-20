@@ -3,12 +3,13 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import { Box } from "@mui/material";
+import { useForm } from "../../../hooks/useForm";
 
 
 const CameraSection = ({ onChange }) => {
-	return (
 
-		<Box sx={{ marginTop: 1 }}>
+	return (
+		<Box sx={{ marginTop: 1, }}>
 			<FormControl fullWidth >
 				<InputLabel
 					color="secondary"
